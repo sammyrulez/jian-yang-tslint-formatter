@@ -1,0 +1,34 @@
+{
+  "name": "jian-yang-tslint-formatter",
+  "version": "1.0.0",
+  "description": "git ",
+  "main": "jianyangFormatter.ts",
+  "scripts": {
+    "test":  "./node_modules/tslint/bin/tslint -p tsconfig.json --formatters-dir ./dist --format jianyang",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammyrulez/jian-yang-tslint-formatter.git"
+  },
+  "keywords": [
+    "tslint",
+    "jianyang",
+    "funny",
+    "joke",
+    "typescript"
+  ],
+  "author": "Sammyrulez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sammyrulez/jian-yang-tslint-formatter/issues"
+  },
+  "homepage": "https://github.com/sammyrulez/jian-yang-tslint-formatter#readme",
+  "devDependencies": {
+    "@types/node": "^10.3.3",
+    "node": "^10.4.1",
+    "ts-node": "^6.1.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
+  }
+}
