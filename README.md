@@ -7,7 +7,7 @@ The output matches what is produced by ESLint's stylish formatter. Just a bit mo
 ## Usage
 
 Download
-[jianyangFormatter.js]([https://github.com/sammyrulez/jian-yang-tslint-formatter/dist/jianyangFormatter.js)
+[I'm a relative reference to a repository file](./dist/jianyangFormatter.js)
 and run tslint from your project folder
 
 ```
