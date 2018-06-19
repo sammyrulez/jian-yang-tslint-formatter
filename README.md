@@ -11,11 +11,16 @@ The output matches what is produced by ESLint's stylish formatter. Just a bit mo
 
 ## Usage
 
-Download [jianyangFormatter.js](./dist/jianyangFormatter.js)
-and run tslint from your project folder
+Install the package
 
 ```
-tslint -p tsconfig.json --formatters-dir /[full path where you downloaded  jianyangFormatter.js ] --format jianyang
+npm install jian-yang-tslint-formatter --save-dev
+```
+
+Then just run tslint form your project directory
+
+```
+tslint -p tsconfig.json --formatters-dir ./node-modules/jian-yang-tslint-formatter/dist --format jianyang
 ```
 
 *Have Fun!*
