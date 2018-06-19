@@ -5,7 +5,8 @@
   "main": "dist/jianyangFormatter.js",
   "scripts": {
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
-    "build": "tsc"
+    "setup": "npm install",
+    "build": "tsc",
   },
   "repository": {
     "type": "git",
