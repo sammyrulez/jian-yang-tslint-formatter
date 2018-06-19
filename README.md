@@ -1,5 +1,7 @@
 # Jian Yang tslint formatter
 
+[![Build Status](https://travis-ci.org/sammyrulez/jian-yang-tslint-formatter.svg?branch=master)](https://travis-ci.org/sammyrulez/jian-yang-tslint-formatter)
+
 *tslint formatter* with quotes by Jian Yang 👓 as seen on _HBO Silicon Valley_. Some quote has been slightly edited to suite better a code linter output message.
 
 <p align="center">
