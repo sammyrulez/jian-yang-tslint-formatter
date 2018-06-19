@@ -22,7 +22,7 @@ npm install jian-yang-tslint-formatter --save-dev
 Then just run tslint form your project directory
 
 ```
-tslint -p tsconfig.json --formatters-dir ./node-modules/jian-yang-tslint-formatter/dist --format jianyang
+tslint -p tsconfig.json --formatters-dir ./node_modules/jian-yang-tslint-formatter/dist --format jianyang
 ```
 
 *Have Fun!*
