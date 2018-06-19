@@ -1,10 +1,10 @@
 {
   "name": "jian-yang-tslint-formatter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "git ",
-  "main": "jianyangFormatter.ts",
+  "main": "dist/jianyangFormatter.js",
   "scripts": {
-    "test":  "./node_modules/tslint/bin/tslint -p tsconfig.json --formatters-dir ./dist --format jianyang",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts",
     "build": "tsc"
   },
   "repository": {
@@ -25,7 +25,11 @@
   },
   "homepage": "https://github.com/sammyrulez/jian-yang-tslint-formatter#readme",
   "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.2",
     "@types/node": "^10.3.3",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
     "node": "^10.4.1",
     "ts-node": "^6.1.1",
     "tslint": "^5.10.0",

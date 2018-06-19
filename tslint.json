@@ -11,8 +11,9 @@
         "max-classes-per-file" : false,
         "interface-name":false,
         "object-literal-sort-keys":false,
+        "member-ordering":false,
         "no-console": {
-            "severity": "",
+            "severity": "warning",
             "options": [
                 "debug",
                 "info",

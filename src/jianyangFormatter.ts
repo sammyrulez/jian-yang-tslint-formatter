@@ -1,6 +1,6 @@
 /**
  * @license
- * 
+ *
  * Copyright 2018 Sammyrulez, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-import { AbstractFormatter } from  "tslint/lib/language/formatter/abstractFormatter" 
+import { AbstractFormatter } from  "tslint/lib/language/formatter/abstractFormatter";
 import { IFormatterMetadata } from "tslint/lib/language/formatter/formatter";
 import { RuleFailure } from "tslint/lib/language/rule/rule";
 
@@ -82,26 +82,25 @@ export class Formatter extends AbstractFormatter {
             return [];
         }
         const outputLines: string[] = [];
-        
 
         let currentFile: string | undefined;
 
         for (const failure of failures) {
             const fileName = failure.getFileName();
             const lineAndCharacter = failure.getStartPosition().getLineAndCharacter();
-            let positionTuple = this.pad(`${lineAndCharacter.line + 1}:${lineAndCharacter.character + 1}`, 7);
+            const positionTuple = this.pad(`${lineAndCharacter.line + 1}:${lineAndCharacter.character + 1}`, 7);
 
             // Output the name of each file once
             if (currentFile !== fileName) {
                 outputLines.push("");
-                outputLines.push(`${fileName}${chalk.hidden(`:${positionTuple}`)}`);
+                outputLines.push(`${fileName}`);
                 currentFile = fileName;
             }
 
-            let failureString = this.quotes[Math.floor(Math.random() * this.quotes.length) ];
+            const failureString = this.quotes[Math.floor(Math.random() * this.quotes.length) ];
 
             // Rule
-            let ruleName = failure.getRuleName();
+            const ruleName = failure.getRuleName();
 
             // Output
             const output = `${positionTuple}  ${ruleName} \n\t\" ${failureString}\"`;
@@ -117,5 +116,4 @@ export class Formatter extends AbstractFormatter {
         return (str + padder).substring(0, padder.length);
     }
 
-    
 }

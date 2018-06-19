@@ -18,7 +18,6 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const abstractFormatter_1 = require("tslint/lib/language/formatter/abstractFormatter");
-const chalk_1 = require("chalk");
 const Utils = require("tslint/lib/utils");
 class Formatter extends abstractFormatter_1.AbstractFormatter {
     constructor() {
@@ -30,8 +29,8 @@ class Formatter extends abstractFormatter_1.AbstractFormatter {
             "My corrupt uncle sent a death certificate from China but to send body is too expensive.",
             "I cremate a pig because a pig is most like a fat human.Your code is a pig.",
             "That is racist.",
-            "Big mortgage. Seven credit cards. Big technical debt.",
-            "This is my code now.",
+            "Big mortgage. Seven credit cards. Big technical debt.👓",
+            "This is my code now.🚬",
             " I hate Errich.",
             " In China, last name comes first.",
             // tslint:disable-next-line:max-line-length
@@ -39,13 +38,13 @@ class Formatter extends abstractFormatter_1.AbstractFormatter {
             "I want your house. Thank you.",
             "Shit-ton. Yes.",
             "We're leaving now. International flight. Four hours early.",
-            "This could've killed me. Now I can give it to Erlich.",
+            "This could've killed me. Now I can give it to Erlich. 🥫 ",
             "Hello. Congratulations. You're pregnant.",
-            " No, and \"not hot dog.\"",
+            " No, and \"not hot dog.\" 🌭 ",
             "Erlich was right. You are a white witch.",
-            "These are from your mom.",
-            "I was driving next to a store window, and I stop and look in my reflection. I looked like an asshole.",
-            "My grandmother gave me a family recipe before she died in a horrible way.",
+            "These are from your mom.🕶️",
+            "I was driving next to a store window, and I stop and look in my reflection. I looked like an asshole. 🏎️",
+            "My grandmother gave me a family recipe before she died in a horrible way. 🍲 ",
         ];
     }
     /* tslint:enable:object-literal-sort-keys */
@@ -67,16 +66,16 @@ class Formatter extends abstractFormatter_1.AbstractFormatter {
         for (const failure of failures) {
             const fileName = failure.getFileName();
             const lineAndCharacter = failure.getStartPosition().getLineAndCharacter();
-            let positionTuple = this.pad(`${lineAndCharacter.line + 1}:${lineAndCharacter.character + 1}`, 7);
+            const positionTuple = this.pad(`${lineAndCharacter.line + 1}:${lineAndCharacter.character + 1}`, 7);
             // Output the name of each file once
             if (currentFile !== fileName) {
                 outputLines.push("");
-                outputLines.push(`${fileName}${chalk_1.default.hidden(`:${positionTuple}`)}`);
+                outputLines.push(`${fileName}`);
                 currentFile = fileName;
             }
-            let failureString = this.quotes[Math.floor(Math.random() * this.quotes.length)];
+            const failureString = this.quotes[Math.floor(Math.random() * this.quotes.length)];
             // Rule
-            let ruleName = failure.getRuleName();
+            const ruleName = failure.getRuleName();
             // Output
             const output = `${positionTuple}  ${ruleName} \n\t\" ${failureString}\"`;
             outputLines.push(output);
