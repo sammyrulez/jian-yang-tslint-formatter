@@ -25,7 +25,9 @@ Then just run tslint form your project directory
 tslint -p tsconfig.json --formatters-dir ./node_modules/jian-yang-tslint-formatter/dist --format jianyang
 ```
 
-[Schermata_2018-06-22_alle_22.00.20.png](https://postimg.cc/image/upmj3yn7n/)
+<p align="center">
+  <img src="https://s5.postimg.cc/ai93bnpqf/Schermata_2018-06-22_alle_22.00.20.png">
+</p>
 
 *Have Fun!*
 
