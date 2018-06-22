@@ -25,6 +25,8 @@ Then just run tslint form your project directory
 tslint -p tsconfig.json --formatters-dir ./node_modules/jian-yang-tslint-formatter/dist --format jianyang
 ```
 
+[Schermata_2018-06-22_alle_22.00.20.png](https://postimg.cc/image/upmj3yn7n/)
+
 *Have Fun!*
 
  Quotes from  [http://siliconvalleyism.com](http://siliconvalleyism.com/silicon-valley-jian-yang-quotes.php) 
